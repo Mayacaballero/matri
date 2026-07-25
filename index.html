@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Isidora &amp; Raimundo · 12 de diciembre de 2026</title>
+<meta name="description" content="Confirma tu asistencia al matrimonio de Isidora y Raimundo. Sábado 12 de diciembre de 2026, Las Condes, Santiago.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400;1,6..96,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --papel:#F7F6F3;
+    --tinta:#1B1B19;
+    --grafito:#5C5C55;
+    --filete:#C9C6BC;
+    --verde:#34493F;
+    --display:"Bodoni Moda", Didot, Georgia, "Times New Roman", serif;
+    --texto:"EB Garamond", Georgia, "Times New Roman", serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--papel);
+    color:var(--tinta);
+    font-family:var(--texto);
+    font-size:18px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+    opacity:.45;
+    background-image:radial-gradient(rgba(90,88,80,.055) 1px, transparent 1px);
+    background-size:3px 3px;
+  }
+
+  .hoja{
+    position:relative;
+    z-index:1;
+    max-width:760px;
+    margin:0 auto;
+    padding:clamp(20px,5vw,56px) clamp(18px,5vw,44px) clamp(40px,7vw,72px);
+  }
+
+  h1,h2,h3{margin:0;font-weight:400;}
+  p{margin:0;}
+
+  .rotulo{
+    display:block;
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:.64rem;
+    color:var(--grafito);
+  }
+  @media (max-width:640px){ .rotulo{letter-spacing:.12em;} }
+
+  /* ---------- portada ---------- */
+  .portada{text-align:center;padding:clamp(24px,6vw,48px) 0 clamp(30px,6vw,44px);}
+
+  .nombres{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:clamp(2.6rem,12vw,4.6rem);
+    line-height:1.06;
+    letter-spacing:-.01em;
+    margin:.28em 0 .3em;
+  }
+  .nombres .y{
+    display:block;
+    font-size:.42em;
+    color:var(--grafito);
+    margin:.12em 0;
+  }
+
+  .fecha{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-size:.76rem;
+    line-height:2;
+  }
+  @media (max-width:640px){ .fecha{letter-spacing:.1em;} }
+
+  .intro{
+    color:var(--grafito);
+    max-width:36ch;
+    margin:1.5em auto 0;
+    font-size:1.02rem;
+  }
+
+  .filete{
+    height:1px;
+    background:var(--filete);
+    max-width:220px;
+    margin:clamp(24px,5vw,34px) auto;
+    transform:scaleX(0);
+    transform-origin:center;
+    animation:trazar 1s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  @keyframes trazar{to{transform:scaleX(1);}}
+
+  .aparece{opacity:0;transform:translateY(10px);animation:surgir .8s ease forwards;}
+  .d1{animation-delay:.1s;} .d2{animation-delay:.3s;} .d3{animation-delay:.5s;}
+  @keyframes surgir{to{opacity:1;transform:none;}}
+
+  /* ---------- secciones ---------- */
+  section{padding:clamp(34px,7vw,56px) 0;}
+  section + section{border-top:1px solid var(--filete);}
+
+  .titulo{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:clamp(1.5rem,5.5vw,2rem);
+    text-align:center;
+    line-height:1.25;
+    margin-bottom:.6em;
+  }
+
+  .bajada{
+    text-align:center;
+    color:var(--grafito);
+    max-width:40ch;
+    margin:0 auto clamp(26px,5vw,36px);
+    font-size:1rem;
+  }
+
+  /* ---------- el día ---------- */
+  .jornada{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(22px,5vw,44px);
+    text-align:center;
+  }
+  @media (max-width:620px){ .jornada{grid-template-columns:1fr;gap:34px;} }
+
+  .hora{
+    font-family:var(--display);
+    font-size:1.6rem;
+    letter-spacing:.04em;
+    margin:.4em 0 .3em;
+  }
+  .lugar{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:1.12rem;
+    line-height:1.4;
+  }
+  .direccion{color:var(--grafito);font-size:.96rem;line-height:1.6;margin-top:.45em;}
+
+  .mapa{
+    display:inline-block;
+    margin-top:.9em;
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.11em;
+    font-size:.68rem;
+    color:var(--verde);
+    text-decoration:none;
+    border-bottom:1px solid var(--filete);
+    padding-bottom:2px;
+  }
+  .mapa:hover,.mapa:focus-visible{border-bottom-color:var(--verde);}
+
+  /* ---------- tarjeta ---------- */
+  .tarjeta{
+    border:1px solid var(--filete);
+    background:linear-gradient(180deg,#FBFAF8,var(--papel));
+    box-shadow:0 16px 34px -30px rgba(27,27,25,.55);
+    padding:clamp(22px,5vw,38px);
+  }
+
+  .campo{margin-bottom:clamp(20px,4vw,26px);}
+  label.rotulo{margin-bottom:.5em;}
+
+  .linea{
+    width:100%;
+    border:0;
+    border-bottom:1px solid var(--filete);
+    background:transparent;
+    font-family:var(--texto);
+    font-size:1.05rem;
+    color:var(--tinta);
+    padding:6px 2px 8px;
+    border-radius:0;
+    transition:border-color .25s ease;
+  }
+  .linea:focus{outline:none;border-bottom-color:var(--verde);}
+  .linea:focus-visible{outline:2px solid var(--verde);outline-offset:4px;}
+  textarea.linea{resize:vertical;min-height:3.2em;line-height:1.6;}
+  .linea::placeholder{color:#AFACA2;font-style:italic;}
+
+  .casillas{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media (max-width:520px){ .casillas{grid-template-columns:1fr;} }
+
+  .casilla{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border:1px solid var(--filete);
+    padding:14px 16px;
+    cursor:pointer;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .casilla:hover{border-color:var(--grafito);}
+  .casilla input{position:absolute;opacity:0;width:1px;height:1px;}
+  .marca{flex:0 0 auto;width:15px;height:15px;border:1px solid var(--grafito);display:grid;place-items:center;}
+  .marca::after{content:"";width:7px;height:7px;background:var(--verde);transform:scale(0);transition:transform .2s ease;}
+  .casilla input:checked ~ .marca::after{transform:scale(1);}
+  .casilla input:checked ~ .texto-casilla{color:var(--tinta);}
+  .casilla:has(input:checked){border-color:var(--verde);background:rgba(52,73,63,.045);}
+  .casilla input:focus-visible ~ .marca{outline:2px solid var(--verde);outline-offset:3px;}
+  .texto-casilla{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:.7rem;
+    color:var(--grafito);
+  }
+
+  .par{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,4vw,26px);}
+  @media (max-width:520px){ .par{grid-template-columns:1fr;gap:20px;} }
+
+  .oculto{display:none;}
+
+  .nota{display:block;color:var(--grafito);font-size:.92rem;font-style:italic;margin-top:.45em;}
+
+  /* bloque de la canción, el momento propio de la tarjeta */
+  .bloque-cancion{
+    margin:clamp(26px,5vw,34px) 0;
+    padding:clamp(20px,4vw,26px);
+    border-top:1px solid var(--filete);
+    border-bottom:1px solid var(--filete);
+    background:rgba(52,73,63,.03);
+  }
+  .bloque-cancion .titulo-cancion{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:1.32rem;
+    line-height:1.3;
+    margin-bottom:.15em;
+  }
+  .bloque-cancion .sub{color:var(--grafito);font-size:.98rem;margin-bottom:1.1em;}
+  .bloque-cancion .linea{font-size:1.1rem;}
+
+  .boton{
+    display:block;
+    width:100%;
+    margin-top:clamp(24px,5vw,30px);
+    background:var(--tinta);
+    color:var(--papel);
+    border:1px solid var(--tinta);
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-size:.74rem;
+    padding:17px 20px;
+    cursor:pointer;
+    border-radius:0;
+    transition:background .25s ease, border-color .25s ease;
+  }
+  .boton:hover{background:var(--verde);border-color:var(--verde);}
+  .boton:focus-visible{outline:2px solid var(--verde);outline-offset:4px;}
+  .boton[disabled]{opacity:.55;cursor:progress;}
+
+  .aviso{margin-top:1em;color:#8A3D2E;font-size:.95rem;font-style:italic;text-align:center;min-height:1.4em;}
+
+  /* sello */
+  .sello-zona{text-align:center;padding:clamp(10px,4vw,24px) 0;}
+  .sello{
+    width:116px;height:116px;
+    margin:0 auto clamp(20px,4vw,26px);
+    border:1px solid var(--verde);
+    border-radius:50%;
+    display:grid;place-content:center;gap:6px;
+    color:var(--verde);
+    animation:sellar .55s cubic-bezier(.2,.9,.3,1.2) both;
+  }
+  @keyframes sellar{from{transform:scale(1.5) rotate(-8deg);opacity:0;}to{transform:none;opacity:1;}}
+  .sello .iniciales{font-family:var(--display);font-style:italic;font-size:1.7rem;}
+  .sello .fecha-sello{font-family:var(--display);font-size:.54rem;letter-spacing:.16em;text-transform:uppercase;}
+  .sello-zona h3{font-family:var(--display);font-style:italic;font-size:1.35rem;margin-bottom:.4em;}
+  .sello-zona p{color:var(--grafito);max-width:36ch;margin:0 auto;}
+  .link-suave{
+    display:inline-block;
+    margin-top:1.4em;
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.11em;
+    font-size:.68rem;
+    color:var(--grafito);
+    background:none;border:0;border-bottom:1px solid var(--filete);
+    padding:0 0 2px;cursor:pointer;
+  }
+  .link-suave:hover{color:var(--tinta);}
+
+  /* ---------- regalos ---------- */
+  .regalos{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,4vw,26px);}
+  @media (max-width:620px){ .regalos{grid-template-columns:1fr;} }
+
+  .regalo{
+    border:1px solid var(--filete);
+    padding:clamp(22px,4vw,30px);
+    text-align:center;
+  }
+  .casa{font-family:var(--display);font-style:italic;font-size:1.15rem;}
+  .codigo{font-family:var(--display);font-size:1.7rem;letter-spacing:.12em;margin:.3em 0 0;}
+  .acciones{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:1.2em;}
+  .btn-fino{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.11em;
+    font-size:.66rem;
+    padding:10px 16px;
+    border:1px solid var(--filete);
+    background:transparent;
+    color:var(--tinta);
+    text-decoration:none;
+    cursor:pointer;
+    border-radius:0;
+    transition:border-color .2s ease,color .2s ease;
+  }
+  .btn-fino:hover{border-color:var(--verde);color:var(--verde);}
+  .btn-fino:focus-visible{outline:2px solid var(--verde);outline-offset:3px;}
+
+  /* ---------- pie ---------- */
+  footer{
+    padding-top:clamp(34px,6vw,50px);
+    border-top:1px solid var(--filete);
+    text-align:center;
+  }
+  .firma{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:1.5rem;
+  }
+  .firma-fecha{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-size:.62rem;
+    color:var(--grafito);
+    margin-top:.9em;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation:none !important;transition:none !important;}
+    .filete{transform:none;}
+    .aparece{opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+<div class="hoja">
+
+  <!-- PORTADA -->
+  <header class="portada">
+    <span class="rotulo aparece d1">Nos casamos</span>
+    <h1 class="nombres aparece d1">Isidora <span class="y">&amp;</span> Raimundo</h1>
+    <p class="fecha aparece d2">Sábado 12 de diciembre de 2026<br>Las Condes, Santiago</p>
+    <div class="filete"></div>
+    <p class="intro aparece d3">
+      Queremos celebrar contigo. Confirma acá y déjanos la canción que no puede faltar.
+    </p>
+  </header>
+
+  <!-- EL DÍA -->
+  <section id="el-dia">
+    <h2 class="titulo">Cómo va a ser el día</h2>
+    <div class="jornada">
+      <div>
+        <span class="rotulo">Ceremonia</span>
+        <p class="hora">16:30</p>
+        <p class="lugar">Colegio Villa María Academy</p>
+        <p class="direccion">Avenida Presidente Errázuriz 3753<br>Las Condes</p>
+        <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida%20Presidente%20Err%C3%A1zuriz%203753%2C%20Las%20Condes%2C%20Santiago" target="_blank" rel="noopener">Ver en el mapa</a>
+      </div>
+      <div>
+        <span class="rotulo">Fiesta</span>
+        <p class="hora">A continuación</p>
+        <p class="lugar">Charles Hamilton 10512</p>
+        <p class="direccion">Las Condes</p>
+        <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Charles%20Hamilton%2010512%2C%20Las%20Condes%2C%20Santiago" target="_blank" rel="noopener">Ver en el mapa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="confirmar">
+    <h2 class="titulo">¿Nos acompañas?</h2>
+    <p class="bajada">Cuéntanos antes del 12 de noviembre así cerramos las mesas tranquilos.</p>
+
+    <div class="tarjeta">
+      <form id="form-rsvp" novalidate>
+
+        <div class="campo">
+          <label class="rotulo" for="nombre">Tu nombre</label>
+          <input class="linea" type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Nombre y apellido">
+        </div>
+
+        <div class="campo">
+          <span class="rotulo">Tu respuesta</span>
+          <div class="casillas">
+            <label class="casilla">
+              <input type="radio" name="asistencia" value="Asiste">
+              <span class="marca" aria-hidden="true"></span>
+              <span class="texto-casilla">Ahí estaré</span>
+            </label>
+            <label class="casilla">
+              <input type="radio" name="asistencia" value="No asiste">
+              <span class="marca" aria-hidden="true"></span>
+              <span class="texto-casilla">No voy a poder</span>
+            </label>
+          </div>
+        </div>
+
+        <div id="bloque-asiste" class="oculto">
+          <div class="campo par">
+            <div>
+              <label class="rotulo" for="personas">¿Cuántos van?</label>
+              <input class="linea" type="number" id="personas" name="personas" min="1" max="10" step="1" value="1" inputmode="numeric">
+            </div>
+            <div>
+              <label class="rotulo" for="acompanantes">¿Con quién vienes?</label>
+              <input class="linea" type="text" id="acompanantes" name="acompanantes" placeholder="Nombre de tu acompañante">
+            </div>
+          </div>
+
+          <div class="campo">
+            <label class="rotulo" for="comida">¿Algo que no comas?</label>
+            <input class="linea" type="text" id="comida" name="comida" placeholder="Alergia, sin gluten, vegetariano, nada">
+          </div>
+        </div>
+
+        <!-- LA CANCIÓN -->
+        <div class="bloque-cancion">
+          <p class="titulo-cancion">La canción que no puede faltar</p>
+          <p class="sub">Esa con la que te paras de la mesa sí o sí. Va derecho a la lista del DJ.</p>
+          <label class="rotulo" for="cancion" style="margin-bottom:.5em;">Canción y quién la canta</label>
+          <input class="linea" type="text" id="cancion" name="cancion" placeholder="Ejemplo: Un año más, Los Prisioneros">
+        </div>
+
+        <div class="campo">
+          <label class="rotulo" for="mensaje">Un mensaje para nosotros</label>
+          <textarea class="linea" id="mensaje" name="mensaje" rows="2" placeholder="Opcional, pero se agradece"></textarea>
+        </div>
+
+        <button class="boton" type="submit" id="btn-enviar">Enviar mi respuesta</button>
+        <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="sello-zona oculto" id="zona-sello">
+        <div class="sello">
+          <span class="iniciales">I &amp; R</span>
+          <span class="fecha-sello">12 · XII · 2026</span>
+        </div>
+        <h3 id="titulo-sello">Listo</h3>
+        <p id="texto-sello">Gracias, nos vemos el 12 de diciembre.</p>
+        <button class="link-suave" type="button" id="btn-corregir">Corregir mi respuesta</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGALOS -->
+  <section id="regalos">
+    <h2 class="titulo">Regalos</h2>
+    <div class="regalos">
+      <div class="regalo">
+        <p class="casa">Novios Falabella</p>
+        <p class="codigo" id="cod-falabella">2105047</p>
+        <div class="acciones">
+          <a class="btn-fino" href="https://novios.falabella.com/" target="_blank" rel="noopener">Ir a la lista</a>
+          <button class="btn-fino" type="button" data-copiar="cod-falabella">Copiar código</button>
+        </div>
+      </div>
+      <div class="regalo">
+        <p class="casa">Mi Lista de Novios</p>
+        <p class="codigo" id="cod-milista">C039717</p>
+        <div class="acciones">
+          <a class="btn-fino" href="https://milistadenovios.cl/" target="_blank" rel="noopener">Ir a la lista</a>
+          <button class="btn-fino" type="button" data-copiar="cod-milista">Copiar código</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="firma">Nos vemos ahí</p>
+    <p class="firma-fecha">Isidora &amp; Raimundo · 12 · XII · 2026</p>
+  </footer>
+
+</div>
+
+<script>
+/* ==========================================================
+   CONFIGURACIÓN
+   Lo único que hay que tocar para dejarla funcionando.
+   ========================================================== */
+const CONFIG = {
+  // Celular donde llegan las confirmaciones por WhatsApp.
+  // Formato internacional sin + ni espacios. Ejemplo Chile: 56912345678
+  whatsapp: "56900000000",
+
+  // Opcional. Si hay una planilla de Google con Apps Script publicado,
+  // pega acá la URL y las respuestas se guardan solas, sin abrir WhatsApp.
+  // Si queda vacío, se usa WhatsApp.
+  endpoint: "https://script.google.com/macros/s/AKfycbz-h0oywXlm4iY7dknGcwa6w4xYQtRreZB9iks95IQ6stxUsjJVudyvTVJjBC822Nnz/exec"
+};
+/* ========================================================== */
+
+const form        = document.getElementById("form-rsvp");
+const zonaSello   = document.getElementById("zona-sello");
+const aviso       = document.getElementById("aviso");
+const btnEnviar   = document.getElementById("btn-enviar");
+const bloque      = document.getElementById("bloque-asiste");
+const tituloSello = document.getElementById("titulo-sello");
+const textoSello  = document.getElementById("texto-sello");
+
+form.querySelectorAll('input[name="asistencia"]').forEach(function (radio) {
+  radio.addEventListener("change", function () {
+    bloque.classList.toggle("oculto", radio.value !== "Asiste");
+    aviso.textContent = "";
+  });
+});
+
+function armarResumen(d) {
+  const l = [];
+  l.push("Confirmación matrimonio Isidora y Raimundo");
+  l.push("");
+  l.push("Nombre: " + d.nombre);
+  l.push("Respuesta: " + (d.asistencia === "Asiste" ? "Asiste" : "No puede asistir"));
+  if (d.asistencia === "Asiste") {
+    l.push("Personas: " + d.personas);
+    if (d.acompanantes) l.push("Acompañante: " + d.acompanantes);
+    if (d.comida)       l.push("Comida: " + d.comida);
+  }
+  if (d.cancion) l.push("Canción: " + d.cancion);
+  if (d.mensaje) l.push("Mensaje: " + d.mensaje);
+  return l.join("\n");
+}
+
+function leerFormulario() {
+  const sel = form.querySelector('input[name="asistencia"]:checked');
+  return {
+    nombre:       document.getElementById("nombre").value.trim(),
+    asistencia:   sel ? sel.value : "",
+    personas:     document.getElementById("personas").value || "1",
+    acompanantes: document.getElementById("acompanantes").value.trim(),
+    cancion:      document.getElementById("cancion").value.trim(),
+    comida:       document.getElementById("comida").value.trim(),
+    mensaje:      document.getElementById("mensaje").value.trim(),
+    enviado:      new Date().toISOString()
+  };
+}
+
+/* Envía la respuesta a la planilla de Google.
+   Primero intenta una llamada normal para poder confirmar que quedó guardada.
+   Si el navegador la bloquea, reintenta a ciegas, que igual escribe la fila. */
+async function guardarEnPlanilla(d) {
+  const cuerpo = JSON.stringify(d);
+
+  try {
+    const r = await fetch(CONFIG.endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: cuerpo,
+      redirect: "follow"
+    });
+    if (r.ok) return true;
+  } catch (err) {
+    // sigue al reintento
+  }
+
+  try {
+    await fetch(CONFIG.endpoint, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: cuerpo
+    });
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+
+function mostrarSello(d) {
+  form.classList.add("oculto");
+  zonaSello.classList.remove("oculto");
+  if (d.asistencia === "Asiste") {
+    tituloSello.textContent = "Quedaste confirmado";
+    textoSello.textContent  = d.cancion
+      ? "Anotamos tu canción. Nos vemos el sábado 12 de diciembre a las 16:30."
+      : "Nos vemos el sábado 12 de diciembre a las 16:30.";
+  } else {
+    tituloSello.textContent = "Respuesta recibida";
+    textoSello.textContent  = "Gracias por avisar. Te vamos a echar de menos ese día.";
+  }
+  zonaSello.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  const d = leerFormulario();
+
+  if (!d.nombre) {
+    aviso.textContent = "Falta tu nombre para poder anotarte.";
+    document.getElementById("nombre").focus();
+    return;
+  }
+  if (!d.asistencia) {
+    aviso.textContent = "Marca si nos acompañas o no.";
+    return;
+  }
+
+  aviso.textContent = "";
+  btnEnviar.disabled = true;
+  btnEnviar.textContent = "Enviando";
+
+  if (CONFIG.endpoint) {
+    const guardado = await guardarEnPlanilla(d);
+    if (guardado) {
+      mostrarSello(d);
+    } else {
+      aviso.textContent = "No pudimos guardar tu respuesta. Revisa tu conexión e intenta de nuevo.";
+      btnEnviar.disabled = false;
+      btnEnviar.textContent = "Enviar mi respuesta";
+    }
+    return;
+  }
+
+  const url = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(armarResumen(d));
+  window.open(url, "_blank", "noopener");
+  mostrarSello(d);
+});
+
+document.getElementById("btn-corregir").addEventListener("click", function () {
+  zonaSello.classList.add("oculto");
+  form.classList.remove("oculto");
+  btnEnviar.disabled = false;
+  btnEnviar.textContent = "Enviar mi respuesta";
+  document.getElementById("nombre").focus();
+});
+
+document.querySelectorAll("[data-copiar]").forEach(function (btn) {
+  btn.addEventListener("click", async function () {
+    const texto = document.getElementById(btn.dataset.copiar).textContent.trim();
+    const original = btn.textContent;
+    try {
+      await navigator.clipboard.writeText(texto);
+      btn.textContent = "Código copiado";
+    } catch (err) {
+      btn.textContent = texto;
+    }
+    setTimeout(function () { btn.textContent = original; }, 2000);
+  });
+});
+</script>
+</body>
+</html>
