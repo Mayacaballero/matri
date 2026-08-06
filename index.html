@@ -404,15 +404,10 @@
         </div>
 
         <div id="bloque-asiste" class="oculto">
-          <div class="campo par">
-            <div>
-              <label class="rotulo" for="personas">¿Cuántos van?</label>
-              <input class="linea" type="number" id="personas" name="personas" min="1" max="10" step="1" value="1" inputmode="numeric">
-            </div>
-            <div>
-              <label class="rotulo" for="acompanantes">¿Con quién vienes?</label>
-              <input class="linea" type="text" id="acompanantes" name="acompanantes" placeholder="Nombre de tu acompañante">
-            </div>
+          <div class="campo">
+            <label class="rotulo" for="acompanantes">Si tu invitación incluye acompañante, escribe su nombre</label>
+            <input class="linea" type="text" id="acompanantes" name="acompanantes" placeholder="Nombre y apellido de tu acompañante">
+            <span class="nota">Si tu invitación es personal, deja este espacio en blanco.</span>
           </div>
 
           <div class="campo">
@@ -533,7 +528,7 @@ function leerFormulario() {
   return {
     nombre:       document.getElementById("nombre").value.trim(),
     asistencia:   sel ? sel.value : "",
-    personas:     document.getElementById("personas").value || "1",
+    personas:     document.getElementById("acompanantes").value.trim() ? "2" : "1",
     acompanantes: document.getElementById("acompanantes").value.trim(),
     cancion:      document.getElementById("cancion").value.trim(),
     comida:       document.getElementById("comida").value.trim(),
